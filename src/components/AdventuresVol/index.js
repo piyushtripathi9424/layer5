@@ -1,4 +1,5 @@
 import React from "react";
+
 import { HiOutlineChevronRight } from "@react-icons/all-files/hi/HiOutlineChevronRight";
 import { AdventuresVolWrapper } from "./adventures-vol.style";
 
@@ -9,15 +10,13 @@ const AdventuresVol = ({ title, description, to, image }) => {
         <div className="handbook__card">
           <h1 className="handbook__card--head">{title}</h1>
           <div className="handbook__card--line"></div>
-          <img src={image} />
-          <p className="handbook__card--para">
-            {description}
-          </p>
+          <img src={image} alt={title} />
+          <p className="handbook__card--para">{description}</p>
           {to && (
             <div className="handbook__card--lm__container">
-              <a href={to} className="handbook__card--lm">
+              <span className="handbook__card--lm">
                 Read More <HiOutlineChevronRight />
-              </a>
+              </span>
             </div>
           )}
         </div>
